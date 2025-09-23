@@ -1,0 +1,27 @@
+SAmple url used :
+https://rahulshettyacademy.com/dropdownsPractise/
+
+SRP- Single responsibility principle:
+Every Module and class should have responsibility over a single part of the functionality provided by the software, and that responsibility should be entirely encapsulated by the class.
+SRP- Where each class has its own job and encapsulates responsibility to other class.
+
+Strategy Pattern:
+The Strategy Pattern is a behavioral design pattern that enables selecting an algorithm's behavior at runtime.
+ It defines a family of algorithms, encapsulates each one, and makes them interchangeable.
+ This pattern allows the algorithm to vary independently from clients that use it.
+// Example: Payment methods (CreditCard, PayPal, Bitcoin) can be selected at runtime.
+
+Factory Design Pattern
+This pattern uses facotry methods to deal with the problem of creating objects
+ without having to specify the exact class of the object that will be created.
+
+ In factory method we create objects by calling a factory method instead of calling a constructor.
+ In short factory pattern gives applciable objects from the family of class that we can use it.
+
+
+Execute Around Pattern:
+The Execute Around Pattern is a design pattern that involves
+ wrapping a piece of code with pre- and post-processing logic.
+ It is often used to manage resources,
+ such as opening and closing files or database connections,
+ ensuring that the resource is properly handled before and after the main operation.

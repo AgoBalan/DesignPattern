@@ -1,0 +1,12 @@
+[
+  {
+    "from": "MAA",
+    "to": "HYD",
+    "to2": "BLR"
+  },
+  {
+    "from": "BLR",
+    "to": "MAA",
+    "to2": "CBE"
+  }
+]
