@@ -128,25 +128,22 @@
 
 /************************************************************************
 * STEP 11:
-* Enable Jenkins to push jar into artifactory using jenkins github hook
-* Goto Settings/System/Github Section/GitHub Servers/Advanced
-* Provide webhook URL http://172.27.128.1:9090/github-webhook/
-* And enable i same Job Configure/GitHub hook trigger for GITScm polling
-* GOto github repo/Settings/Webhooks/Add webhook and save
-*  Note: Webhook is private url, Whereas Github can use only public url
-*   Inorder to route private to public url use SocketXP app.
-* Download socketXP, signup and login
-* https://portal.socketxp.com/#/ copy auth token
-* CMD to path where sockexp,exe present C:\socketxp>
-* >socketxp login <Token>
+* 1.Enable Jenkins job to push jar into artifactory using jenkins github hook
+* 2.In Jenkins, Goto Settings/System/Github Section/GitHub Servers/Advanced
+* 3.Provide webhook URL http://172.27.128.1:9090/github-webhook/  (local IP)
+* 4.And enable the same jenkins Job Configure -> select GitHub hook trigger for GITScm polling
+* 5.Goto github repo/Settings/Webhooks/Add webhook and save
+*  5.1Note: Webhook is private url, Whereas Github can use only public url
+*  5.2Inorder to route private to public url use SocketXP application(google and install)
+* 6.Download socketXP, signup and login
+* 7.https://portal.socketxp.com/#/ copy auth token
+* 8.CMD to path where sockexp,exe present ex: C:\socketxp>
+* 9.>socketxp login <pastet the Token here>
   Login Succeeded.
   User [jehovabalan@gmail.com] Email [jehovabalan@gmail.com].
-  ###TO map local port to public url
-  C:\socketxp>socketxp connect http://172.27.128.1:9090
-
-Connected to SocketXP Cloud Gateway.
-Public URL -> https://jehovaballan-556c5b8eb-91bc-452f-b4e8-d86e6d672842.socketxp.com
-in github replace previous webhook with this public url
-
-* ************************************************************************/
-}
+  ###To map local port(Jenkins opened port) to public url
+  C:\socketxp>socketxp connect http://172.27.128.1:7777  (local jenkins port 7777)
+  Connected to SocketXP Cloud Gateway.
+  Public URL -> https://jehovaballan-556c5b8eb-91bc-452f-b4e8-d86e6d672842.socketxp.com
+10.in github replace previous webhook with this public url
+************************************************************************/
