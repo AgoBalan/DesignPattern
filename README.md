@@ -128,6 +128,7 @@
 
 /************************************************************************
 * STEP 11:
+*   Using Jenkins pipeline to push jar to jFrog Artifactory
 * 1.Enable Jenkins job to push jar into artifactory using jenkins github hook
 * 2.In Jenkins, Goto Settings/System/Github Section/GitHub Servers/Advanced
 * 3.Provide webhook URL http://172.27.128.1:9090/github-webhook/  (local IP)
