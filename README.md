@@ -1,8 +1,14 @@
   System.out.println("This is a demo test.");
 
+         Webdriver is intialized using 
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        Singleton design Pattern
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         //From the test case, we call 1 class and from this class object we call other classes
         //like getNavigationBar() and getFooterNavigation()
-        //THis is single page responsibility principle.
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        THis is single page responsibility principle.
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
         travelHomePage.goTo();
         travelHomePage.getNavigationBar().setFlights();
@@ -17,8 +23,10 @@
 
         /*******************************************************************
          *  STEP 2:
-         * Calling each class files directly is not efficient way.
+         * Calling each class files directly is not efficient way
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
          * Hence we can go with Next approach of strategy design pattern.
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
          * At run time we decide which implementation to be used.
          * So we can avoid creating getMultiTrip() and getRoundTrip() methods.Less code
          ********************************************************************/
@@ -30,7 +38,9 @@
          * STEP 3:
          * However the above approach is not the best one as we are exposing
          *the implementation classes to the test class and defining secElement in Testcase
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
          * Another approach is to go with Factory Design Pattern
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
          ********************************************************************/
          travelHomePage.setBookingStrategyWithPageFactory("MultiTrip");
 

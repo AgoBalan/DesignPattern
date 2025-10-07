@@ -18,15 +18,6 @@ import java.util.HashMap;
 import java.util.List;
 
 public class DemoTest extends BaseTest {
-    WebDriver driver;
-    TravelHomePage travelHomePage;
-
-    @BeforeTest
-    public void setup() {
-        driver = initiateDriver();
-        travelHomePage = new TravelHomePage(driver);
-    }
-
     @Test(dataProvider = "getData")
     public void flightTest(HashMap<String, String> fromTopReservationDetails) {
         System.out.println("This is a demo test.");
@@ -127,10 +118,7 @@ public class DemoTest extends BaseTest {
         List<HashMap<String,String>> llist = getJsonData("src/test/resources/TestData/flightBooking.json");
         return new Object[][]{ {llist.get(0)}, {llist.get(1)}};
     }
-    @AfterTest()
-    public void tearDown(){
-        driver.quit();
-    }
+
 
     /************************************************************************
      *STEP 8:
