@@ -21,7 +21,15 @@ public class DemoTest extends BaseTest {
 
     @Test
     public void TC1() throws InterruptedException {
-        travelHomePage.goToGoogle();
+        travelHomePage.goToGoogle(1);
+    }
+    @Test
+    public void TC2() throws InterruptedException {
+        travelHomePage.goToGoogle(2);
+    }
+    @Test
+    public void TC3() throws InterruptedException {
+        travelHomePage.goToGoogle(3);
     }
     @Test(dataProvider = "getData")
     public void flightTest(HashMap<String, String> fromTopReservationDetails) {

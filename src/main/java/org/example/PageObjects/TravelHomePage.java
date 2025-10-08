@@ -38,12 +38,12 @@ public class TravelHomePage {
         System.out.println("Travel end");
 
     }
-    public void goToGoogle() throws InterruptedException {
+    public void goToGoogle(int i) throws InterruptedException {
       // WebDriver driver = DriverManager.getDriver();
         driver.get("https://www.google.com");
-        System.out.println("Google start");
-        Thread.sleep(5000);
-        System.out.println("Google end");
+        System.out.println("Google start, Thread: "+i);
+        Thread.sleep(2000);
+        System.out.println("Google end , Thread: "+i);
     }
 
 
