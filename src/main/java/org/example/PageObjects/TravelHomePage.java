@@ -8,34 +8,40 @@ import org.example.PageComponents.NavigationBar;
 import org.example.PageComponents.RoundTrip;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import utils.DriverManager;
 
 import java.time.Duration;
 import java.util.HashMap;
 
 public class TravelHomePage {
     // This is the main page from here user can navigate to other pages.Single page responsibility principle.
-
+    private WebDriver driver;
     By sectionElement= By.id("traveller-home");
     By topSectionElement= By.xpath("//div[@class='search-buttons-heading']");
 
     SearchFlight searchFlight;
     String type;
-    WebDriver driver;
+
 
     public TravelHomePage(WebDriver driver) {
         this.driver = driver;
     }
 
     public void goTo(){
+       // WebDriver driver = DriverManager.getDriver();
         driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
         driver.manage().window().maximize();
         driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(5));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
     }
-    public void killDriver(){
-        driver.quit();
+    public void goToGoogle() throws InterruptedException {
+      // WebDriver driver = DriverManager.getDriver();
+        driver.get("https://www.google.com");;
+        Thread.sleep(50000);
     }
+
 
     public NavigationBar getNavigationBar() {
         System.out.println("Welcome to the Travel Home Page!");

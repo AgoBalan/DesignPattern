@@ -18,6 +18,11 @@ import java.util.HashMap;
 import java.util.List;
 
 public class DemoTest extends BaseTest {
+
+    @Test
+    public void TC1() throws InterruptedException {
+        travelHomePage.goToGoogle();
+    }
     @Test(dataProvider = "getData")
     public void flightTest(HashMap<String, String> fromTopReservationDetails) {
         System.out.println("This is a demo test.");
@@ -28,7 +33,7 @@ public class DemoTest extends BaseTest {
 
         travelHomePage.goTo();
         travelHomePage.getNavigationBar().setFlights();
-        travelHomePage.getFooterNavigation().setFlights();
+      //  travelHomePage.getFooterNavigation().setFlights();
 
         /*******************************************************************
          *  STEP 1:
@@ -54,7 +59,7 @@ public class DemoTest extends BaseTest {
          *the implementation classes to the test class and defining secElement in Testcase
          * Another approach is to go with Factory Design Pattern
          ********************************************************************/
-         travelHomePage.setBookingStrategyWithPageFactory("MultiTrip");
+       //  travelHomePage.setBookingStrategyWithPageFactory("MultiTrip");
 
         /*******************************************************************
          * Passing city as argument is not advisable as multi trip has multiple destination
@@ -76,7 +81,7 @@ public class DemoTest extends BaseTest {
          * STEP 5:
          * But still there is problem in above, why to hardcode teh data, rather parameterize it
          *******************************************************************/
-        travelHomePage.bookFlight(fromTopReservationDetails);
+       // travelHomePage.bookFlight(fromTopReservationDetails);
 
         /*******************************************************************
          *  STEP 6:

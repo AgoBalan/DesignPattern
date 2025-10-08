@@ -25,7 +25,7 @@ public class BaseTest extends DataProvider {
 
     @AfterTest()
     public void tearDown(){
-        driver.quit();
+        DriverManager.getDriver().quit();
     }
 }
 
