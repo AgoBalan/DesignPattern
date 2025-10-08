@@ -29,17 +29,21 @@ public class TravelHomePage {
 
     public void goTo(){
        // WebDriver driver = DriverManager.getDriver();
+        System.out.println("Travel start");
         driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
         driver.manage().window().maximize();
         driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(5));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        System.out.println("Travel end");
 
     }
     public void goToGoogle() throws InterruptedException {
       // WebDriver driver = DriverManager.getDriver();
-        driver.get("https://www.google.com");;
-        Thread.sleep(50000);
+        driver.get("https://www.google.com");
+        System.out.println("Google start");
+        Thread.sleep(5000);
+        System.out.println("Google end");
     }
 
 

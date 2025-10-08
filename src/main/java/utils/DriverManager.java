@@ -6,8 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class DriverManager {
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-    private DriverManager() {}
-
     public static WebDriver getDriver() {
         if (driver.get() == null) {
             System.getProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");

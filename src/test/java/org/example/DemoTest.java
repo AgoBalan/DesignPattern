@@ -93,19 +93,21 @@ public class DemoTest extends BaseTest {
 
     @DataProvider()
     public Object[][] getData() throws IOException {
-       /*******************************************************************
+
         HashMap<String, String> reservationDetails = new HashMap<>();
         reservationDetails.put("from", "MAA");
         reservationDetails.put("to", "HYD");
         reservationDetails.put("to2", "BLR");
-
+        List<HashMap<String,String>> llist = new ArrayList();
+        llist.add(reservationDetails);
+        return new Object[][]{{reservationDetails}};
+        /*******************************************************************
         HashMap<String, String> reservationDetails2 = new HashMap<>();
         reservationDetails2.put("from", "BLR");
         reservationDetails2.put("to", "MAA");
         reservationDetails2.put("to2", "CBE");
 
-        List<HashMap<String,String>> llist = new ArrayList();
-        llist.add(reservationDetails);
+
         llist.add(reservationDetails2);
 
         //Use either way to pass data
@@ -120,8 +122,8 @@ public class DemoTest extends BaseTest {
          *I want to pass it from external file
          *Go and check DataDrivenTest class
          *******************************************************************/
-        List<HashMap<String,String>> llist = getJsonData("src/test/resources/TestData/flightBooking.json");
-        return new Object[][]{ {llist.get(0)}, {llist.get(1)}};
+      //  List<HashMap<String,String>> llist = getJsonData("src/test/resources/TestData/flightBooking.json");
+        //return new Object[][]{ {llist.get(0)}, {llist.get(1)}};
     }
 
 
