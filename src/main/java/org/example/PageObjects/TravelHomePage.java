@@ -2,13 +2,11 @@ package org.example.PageObjects;
 
 import org.example.AbstractComponent.PageFactory;
 import org.example.AbstractComponent.SearchFlight;
-import org.example.PageComponents.FooterNavigationBar;
-import org.example.PageComponents.MultiTrip;
-import org.example.PageComponents.NavigationBar;
-import org.example.PageComponents.RoundTrip;
+import org.example.PageComponents.*;
+import org.example.PageComponents.FacadeDesignPages.FacadeNavigationBar;
+import org.example.PageComponents.FacadeDesignPages.FacadeRoundTrip;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import utils.DriverManager;
 
 import java.time.Duration;
 import java.util.HashMap;
@@ -18,7 +16,7 @@ public class TravelHomePage {
     private WebDriver driver;
     By sectionElement= By.id("traveller-home");
     By topSectionElement= By.xpath("//div[@class='search-buttons-heading']");
-
+    By commonElement= By.xpath("//div");
     SearchFlight searchFlight;
     String type;
 
@@ -51,6 +49,10 @@ public class TravelHomePage {
         System.out.println("Welcome to the Travel Home Page!");
         return new NavigationBar(driver,topSectionElement);
     }
+    public FacadeNavigationBar getFacadeNavigationBar() {
+        System.out.println("Welcome to the Travel Home Page!");
+        return new FacadeNavigationBar(driver);
+    }
     public FooterNavigationBar getFooterNavigation() {
         System.out.println("Welcome to the Travel Home Page!");
         return new FooterNavigationBar(driver, sectionElement);
@@ -63,6 +65,10 @@ public class TravelHomePage {
     public RoundTrip getRoundTrip() {
         By secElement= By.id("flightSearchContainer");
         return new RoundTrip(driver, secElement);
+    }
+
+    public FacadeRoundTrip getFacadeRoundTrip() {
+        return new FacadeRoundTrip(driver);
     }
 
     public void setBookingStrategy(SearchFlight implementedClassObject){

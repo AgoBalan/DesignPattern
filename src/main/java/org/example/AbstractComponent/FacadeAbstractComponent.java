@@ -3,23 +3,20 @@ package org.example.AbstractComponent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public abstract class AbstractComponent {
-    WebElement sectionElement;
+public class FacadeAbstractComponent {
     WebDriver driver;
 
-    public  AbstractComponent(WebDriver driver, By sectionElement) {
-        this.sectionElement = driver.findElement(sectionElement); // Initialize
+    public FacadeAbstractComponent(WebDriver driver) {
         this.driver = driver;
     }
     public WebElement findElement(By findElementsBy) {
         try {
-            return sectionElement.findElement(findElementsBy);
+            return driver.findElement(findElementsBy);
         }catch (Exception e){
             System.out.println("Element not found "+ e.getMessage());
             return null;
